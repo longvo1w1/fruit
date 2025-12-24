@@ -19,8 +19,7 @@
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "generate:firebase-config": "node scripts/generate-firebase-config.js",
-    "build": "npm run generate:firebase-config && vite build"
+    "build": "vite build"
   },
   "dependencies": {
     "@vueuse/core": "^12.5.0",
