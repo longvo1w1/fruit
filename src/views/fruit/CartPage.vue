@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useCart } from '~/store/cart'
 import { useRouter } from 'vue-router'
-import { useI18n } from 'vue-i18n'
+import { useI18n } from '~/i18n'
 
 const cart = useCart()
 const router = useRouter()
@@ -116,7 +116,7 @@ const { t } = useI18n()
           </div>
 
           <button
-            @click="router.push('/fruit/checkout')"
+            @click="router.push('/checkout')"
             class="w-full py-3 rounded-xl
                    bg-[#134b39] text-white font-semibold
                    hover:bg-[#0f3c2d]

@@ -26,7 +26,7 @@ watch(
 
       <!-- LEFT: LOGO -->
       <RouterLink
-        to="/fruit"
+        to="/"
         class="flex items-center gap-3 group"
       >
         <img
@@ -48,14 +48,14 @@ watch(
                text-sm font-semibold tracking-[0.14em]
                text-[#2f3a34]">
 
-        <RouterLink to="/fruit" class="relative hover:text-[#b99a5f] transition
+        <RouterLink to="/" class="relative hover:text-[#b99a5f] transition
          after:absolute after:left-0 after:-bottom-2
          after:h-[2px] after:w-0 after:bg-[#b99a5f]
          after:transition-all hover:after:w-full" exact-active-class="text-[#b99a5f] after:w-full">
           {{ t('nav.home') }}
         </RouterLink>
 
-        <RouterLink to="/fruit/products" class="relative hover:text-[#b99a5f] transition
+        <RouterLink to="/products" class="relative hover:text-[#b99a5f] transition
          after:absolute after:left-0 after:-bottom-2
          after:h-[2px] after:w-0 after:bg-[#b99a5f]
          after:transition-all hover:after:w-full" active-class="text-[#b99a5f] after:w-full">
@@ -67,7 +67,7 @@ watch(
       <div class="flex items-center gap-6">
 
         <!-- CART ICON -->
-        <RouterLink to="/fruit/cart" class="relative group flex items-center justify-center">
+        <RouterLink to="/cart" class="relative group flex items-center justify-center">
 
           <!-- CART ICON -->
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#2f3a34]

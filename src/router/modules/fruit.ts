@@ -2,50 +2,50 @@ import type { RouteRecordRaw } from 'vue-router'
 
 const fruitRoutes: RouteRecordRaw[] = [
   {
-    path: '/fruit',
+    path: '/',
     component: () => import('~/layouts/FruitLayout.vue'),
     children: [
       {
         path: '',
-        name: 'FruitHome',
+        name: 'Home',
         component: () => import('~/views/fruit/HomePage.vue')
       },
       {
         path: 'products',
-        name: 'FruitProducts',
+        name: 'Products',
         component: () => import('~/views/fruit/ProductsPage.vue')
       },
       {
         path: 'products/:id',
-        name: 'FruitProductDetail',
+        name: 'ProductDetail',
         component: () => import('~/views/fruit/ProductDetailPage.vue')
       },
       {
         path: 'about',
-        name: 'FruitAbout',
+        name: 'About',
         component: () => import('~/views/fruit/AboutPage.vue')
       },
       {
         path: 'contact',
-        name: 'FruitContact',
+        name: 'Contact',
         component: () => import('~/views/fruit/ContactPage.vue')
       },
       {
         path: 'cart',
-        name: 'FruitCart',
+        name: 'Cart',
         component: () => import('~/views/fruit/CartPage.vue')
       },
       {
         path: 'checkout',
-        name: 'FruitCheckout',
+        name: 'Checkout',
         component: () => import('~/views/fruit/CheckoutPage.vue')
-      },
-      {
-        path: ':pathMatch(.*)*',
-        name: 'FruitNotFound',
-        component: () => import('~/views/fruit/NotFound.vue')
       }
     ]
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => import('~/views/fruit/NotFound.vue')
   }
 ]
 

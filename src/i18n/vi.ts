@@ -122,6 +122,13 @@ about: {
       title: 'Đối tác lâu dài',
       desc: 'Xây dựng mối quan hệ bền vững với khách hàng toàn cầu.'
     }
+  },
+    notFound: {
+    title: 'Không tìm thấy trang',
+    description:
+      'Trang bạn đang tìm kiếm không tồn tại hoặc đã bị di chuyển.',
+    backHome: 'Quay về trang chủ',
+    goBack: 'Quay lại'
   }
 }
 

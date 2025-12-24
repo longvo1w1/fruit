@@ -122,6 +122,13 @@ about: {
       title: 'Long-term Partnership',
       desc: 'Building sustainable relationships with global clients.'
     }
+  },
+   notFound: {
+    title: 'Page Not Found',
+    description:
+      'The page you are looking for does not exist or has been moved.',
+    backHome: 'Back to Home',
+    goBack: 'Go Back'
   }
 }
 

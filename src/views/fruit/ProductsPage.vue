@@ -60,7 +60,7 @@ onMounted(() => {
 onBeforeUnmount(() => clearInterval(timer))
 
 function goDetail(id: number) {
-  router.push(`/fruit/products/${id}`)
+  router.push(`/products/${id}`)
 }
 
 function add(p: any) {

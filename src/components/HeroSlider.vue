@@ -7,7 +7,7 @@
             <div class="hero-title">{{ t('hero.title') }}</div>
             <div class="hero-sub">{{ t('hero.subtitle') }}</div>
 
-            <router-link class="btn btn-primary" to="/fruit/products">
+            <router-link class="btn btn-primary" to="/products">
               {{ t('hero.cta') }}
             </router-link>
           </div>

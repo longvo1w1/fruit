@@ -33,21 +33,21 @@ const { t } = useI18n()
           <ul class="space-y-2 text-sm">
             <li>
               <RouterLink
-                to="/fruit/about"
+                to="/about"
                 class="hover:text-[#b99a5f] transition">
                 {{ t('footer.about') }}
               </RouterLink>
             </li>
             <li>
               <RouterLink
-                to="/fruit/contact"
+                to="/contact"
                 class="hover:text-[#b99a5f] transition">
                 {{ t('footer.contact') }}
               </RouterLink>
             </li>
             <li>
               <RouterLink
-                to="/fruit/products"
+                to="/products"
                 class="hover:text-[#b99a5f] transition">
                 {{ t('footer.products') }}
               </RouterLink>
@@ -63,14 +63,14 @@ const { t } = useI18n()
           <ul class="space-y-2 text-sm">
             <li>
               <RouterLink
-                to="/fruit/privacy"
+                to="/privacy"
                 class="hover:text-[#b99a5f] transition">
                 {{ t('footer.privacy') }}
               </RouterLink>
             </li>
             <li>
               <RouterLink
-                to="/fruit/terms"
+                to="/terms"
                 class="hover:text-[#b99a5f] transition">
                 {{ t('footer.terms') }}
               </RouterLink>

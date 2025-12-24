@@ -2,7 +2,7 @@
 import { reactive, computed, ref } from 'vue'
 import { useCart } from '~/store/cart'
 import { useRouter } from 'vue-router'
-import { useI18n } from 'vue-i18n'
+import { useI18n } from '~/i18n'
 
 const cart = useCart()
 const router = useRouter()
@@ -69,7 +69,7 @@ async function submit() {
           {{ t('cart.empty') }}
         </p>
         <button
-          @click="router.push('/fruit/products')"
+          @click="router.push('/products')"
           class="px-6 py-3 rounded-xl
                  bg-[#134b39] text-white font-semibold
                  hover:bg-[#0f3c2d] transition">
@@ -88,7 +88,7 @@ async function submit() {
           {{ t('checkout.successDesc') }}
         </p>
         <button
-          @click="router.push('/fruit')"
+          @click="router.push('/')"
           class="px-6 py-3 rounded-xl
                  bg-[#134b39] text-white font-semibold
                  hover:bg-[#0f3c2d] transition">
