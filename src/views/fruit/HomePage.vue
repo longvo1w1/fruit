@@ -12,10 +12,7 @@ const { t } = useI18n()
   <!-- HERO -->
   <section class="relative bg-[#f4f1ea]">
     <div class="relative">
-      <img
-        :src="'images/banner.png'"
-        class="w-full h-[520px] object-cover"
-      />
+      <img :src="'images/banner.png'" class="w-full h-[520px] object-cover" />
 
       <!-- overlay -->
       <div class="absolute inset-0 bg-black/40"></div>
@@ -23,18 +20,17 @@ const { t } = useI18n()
       <!-- content -->
       <div class="absolute inset-0 flex items-center">
         <div class="max-w-6xl mx-auto px-6">
-          <h1
-            class="text-white text-4xl md:text-5xl font-extrabold
+          <h1 class="text-white text-4xl md:text-5xl font-extrabold
                    leading-tight max-w-3xl whitespace-pre-line">
             {{ t('home.hero.title') }}
           </h1>
 
-          <button
-            class="mt-8 px-8 py-3 rounded
-                   bg-[#b99a5f] text-white text-sm font-semibold
-                   tracking-widest hover:bg-[#a88a52] transition">
+          <RouterLink to="/products" class="inline-block mt-8 px-8 py-3 rounded
+         bg-[#b99a5f] text-white text-sm font-semibold
+         tracking-widest hover:bg-[#a88a52]
+         transition">
             {{ t('home.hero.cta') }}
-          </button>
+          </RouterLink>
         </div>
       </div>
     </div>
@@ -48,12 +44,7 @@ const { t } = useI18n()
       </p>
 
       <div class="flex justify-center gap-12 flex-wrap">
-        <CategoryItem
-          v-for="c in categories"
-          :key="c.id"
-          :name="c.name"
-          :image="c.image"
-        />
+        <CategoryItem v-for="c in categories" :key="c.id" :name="c.name" :image="c.image" />
       </div>
     </div>
   </section>
@@ -66,12 +57,7 @@ const { t } = useI18n()
       </h2>
 
       <div class="grid grid-cols-2 md:grid-cols-3 gap-y-16">
-        <WhyItem
-          v-for="w in whyChooseUs"
-          :key="w.id"
-          :icon="w.icon"
-          :label="w.label"
-        />
+        <WhyItem v-for="w in whyChooseUs" :key="w.id" :icon="w.icon" :label="w.label" />
       </div>
     </div>
   </section>
@@ -103,13 +89,9 @@ const { t } = useI18n()
       </h3>
 
       <div class="flex justify-center gap-2 max-w-md mx-auto">
-        <input
-          type="email"
-          :placeholder="t('home.newsletter.placeholder')"
-          class="flex-1 px-4 py-2 text-sm outline-none"
-        />
-        <button
-          class="px-6 py-2 bg-[#b99a5f]
+        <input type="email" :placeholder="t('home.newsletter.placeholder')"
+          class="flex-1 px-4 py-2 text-sm outline-none" />
+        <button class="px-6 py-2 bg-[#b99a5f]
                  text-white text-xs tracking-widest">
           {{ t('home.newsletter.button') }}
         </button>
