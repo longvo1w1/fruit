@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^12.5.0",
+    "ant-design-vue": "^4.2.6",
     "apexcharts": "^4.1.0",
     "axios": "^1.7.7",
     "date-fns": "^4.1.0",

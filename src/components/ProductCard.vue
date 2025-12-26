@@ -1,23 +1,44 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-import ProductCard from '~/components/fruit/ProductCard.vue'
-import { products } from '~/data/products'
-
-const { t } = useI18n()
+defineProps<{
+  name: string
+  price: string
+  image: string
+  ctaLabel: string
+}>()
 </script>
 
 <template>
-  <section class="container py-16">
-    <h1 class="text-3xl font-extrabold mb-10">
-      {{ t('products.title') }}
-    </h1>
+  <article
+    class="bg-white rounded-2xl overflow-hidden
+           border border-slate-100
+           shadow-sm hover:shadow-xl transition-shadow"
+  >
+    <img
+      :src="image"
+      :alt="name"
+      loading="lazy"
+      class="h-48 w-full object-cover"
+    />
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <ProductCard
-        v-for="p in products"
-        :key="p.id"
-        :product="p"
-      />
+    <div class="p-5">
+      <h3 class="font-semibold text-slate-900">
+        {{ name }}
+      </h3>
+
+      <div class="mt-2 flex items-center justify-between">
+        <span class="font-bold text-brand-gold">
+          {{ price }}
+        </span>
+
+        <button
+          class="min-h-[36px] px-4 rounded-lg
+                 bg-brand-gold text-white text-sm font-semibold
+                 hover:bg-brand-goldHover hover:-translate-y-[2px]
+                 active:scale-95 transition-all"
+        >
+          {{ ctaLabel }}
+        </button>
+      </div>
     </div>
-  </section>
+  </article>
 </template>

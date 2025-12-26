@@ -1,23 +1,17 @@
-<template>
-  <section class="stats">
-    <div class="container stats-inner">
-      <div class="stat">
-        <div class="stat-icon">🌍</div>
-        <div class="stat-text">{{ t('stats.s1') }}</div>
-      </div>
-      <div class="stat">
-        <div class="stat-icon">✅</div>
-        <div class="stat-text">{{ t('stats.s3') }}</div>
-      </div>
-      <div class="stat">
-        <div class="stat-icon">🌿</div>
-        <div class="stat-text">{{ t('stats.s2') }}</div>
-      </div>
-    </div>
-  </section>
-</template>
-
 <script setup lang="ts">
-import { useI18n } from '~/i18n'
-const { t } = useI18n()
+defineProps<{
+  label: string
+  value: string
+}>()
 </script>
+
+<template>
+  <div class="text-center">
+    <div class="text-3xl font-extrabold text-brand-gold">
+      {{ value }}
+    </div>
+    <div class="mt-1 text-sm text-slate-500">
+      {{ label }}
+    </div>
+  </div>
+</template>
